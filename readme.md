@@ -1,3 +1,5 @@
+# how to run guide 
+
 ## run docker file
 ```docker-compose -f ./docker/docker-compose.yml  up ```
 
@@ -5,7 +7,7 @@
 
 ``` nodejs ./mock-server/index.js```
 
-## start ecommerce app, rum Application
+## start ecommerce app, run Application
 
 ## send request
 
