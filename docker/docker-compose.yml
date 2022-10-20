@@ -1,0 +1,24 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 4kk45C4L4
+      MYSQL_DATABASE: ecommerce
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 4kk45C4L4
+    networks:
+      - ecomm-network
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./mysql/data/:/var/lib/mysql
+      - ./../database/init_db.sql:/docker-entrypoint-initdb.d/1.sql
+networks:
+  ecomm-network:
+    driver: bridge

@@ -1,0 +1,8 @@
+*.class
+.lib/
+dist/*
+target/
+project/boot/
+project/plugins/project/
+src/*/target
+app/target
